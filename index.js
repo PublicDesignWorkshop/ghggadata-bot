@@ -11,10 +11,10 @@ console.log(Date());
 var Bot = new Twit(twitterConfig);
 var csv = new Converter({});
 
-var obj = JSON.parse(fs.readFileSync('ghgga-index.json', 'utf8') || '{}');
+var obj = JSON.parse(fs.readFileSync(__dirname + '/ghgga-index.json', 'utf8') || '{}');
 var index = obj.index || 0;
 
-csv.fromFile("./ghgga.csv", function(err,csvFile) {
+csv.fromFile(__dirname + '/ghgga.csv', function(err,csvFile) {
 
   index++;
   var record = csvFile[index];
@@ -87,7 +87,7 @@ csv.fromFile("./ghgga.csv", function(err,csvFile) {
 
 
   // save csv index
-  jsonfile.writeFile('ghgga-index.json', { 'index': index }, { spaces: 2 }, function(err) {
+  jsonfile.writeFile(__dirname + '/ghgga-index.json', { 'index': index }, { spaces: 2 }, function(err) {
     if (err) console.error('error saving index', err);
   });
 });
