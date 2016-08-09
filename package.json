@@ -1,0 +1,19 @@
+{
+  "name": "ghgga",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^1.0.0",
+    "jimp": "^0.2.24",
+    "jsonfile": "^2.3.1",
+    "moment": "^2.14.1",
+    "request": "^2.74.0",
+    "twit": "^2.2.4"
+  }
+}
